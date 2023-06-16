@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 # 六、在 debugtalk.py（必须是这里）中写一个查询数据 sql 的方法
 import datetime
 import time
@@ -85,8 +86,8 @@ def select_one_data_str_test(sql=None):
     k = DbStudy.DB('dev').select_one(sql=sql)
     # kk = list(k)  [a]
     # for i in k:
-        # i += 1
-        # if i == 1:
+    # i += 1
+    # if i == 1:
     return k
 
 
@@ -128,7 +129,7 @@ def phone():
 def createphone_number():
     """
     用Faker随机生成手机号码
-    :return:
+    :return:随机生成手机号码
     """
     fake = Faker(locale='zh_CN')
     return fake.phone_number()
@@ -148,7 +149,7 @@ def createName():
 def createSSN():
     """
     随机生成身份证号码
-    :return: 身份证号码
+    :return: 随机身份证号码
     """
     fake = Faker(locale='zh_CN')
     return fake.ssn()
@@ -157,7 +158,7 @@ def createSSN():
 def createAddress():
     """
     随机生成一个地址
-    :return:
+    :return:随机生成一个地址
     """
     fake = Faker(locale='zh_CN')
     return fake.address()
@@ -166,7 +167,7 @@ def createAddress():
 def createEmail():
     """
     随机生成一个电子邮箱
-    :return: 电子邮箱
+    :return: 随机电子邮箱
     """
     fake = Faker(locale='zh_CN')
     return fake.email()
@@ -175,7 +176,7 @@ def createEmail():
 def creatCredit_card_number():
     """
     随机生成一个信用卡号
-    :return:
+    :return: 随机信用卡号
     """
     fakr = Faker(locale='zh_CN')
     return fakr.credit_card_number()
@@ -205,7 +206,7 @@ def get_NumSecondTime():
 def get_NumSecondTimezhongwen():
     """
     获取当前时间，带中文年月日时分秒的
-    :return:
+    :return: 带中文年月日时分秒的
     """
     run = RunTimeMy()
     s3 = run.getNumSecondTimezhongwen()
@@ -215,7 +216,7 @@ def get_NumSecondTimezhongwen():
 def getTime_H5():
     """
     获取签名里面的时间戳
-    :return:
+    :return: 切片出来返回时间
     """
     ret = requests.get("https://dev.ejiayou.com/sign/h5/tRmFSGexZmIxVR4o/Ea8u3e23tvYD8yi3")
     time_h5 = ret.text.split('=')[1].split('&')[0]
@@ -225,7 +226,7 @@ def getTime_H5():
 def getsign_H5():
     """
     获取签名里面的snig
-    :return:
+    :return: 切片出来返回snig
     """
     ret = requests.get("https://dev.ejiayou.com/sign/h5/tRmFSGexZmIxVR4o/Ea8u3e23tvYD8yi3")
     sign_h5 = ret.text.split('/')
@@ -237,9 +238,9 @@ value = getsign_H5()
 
 def forEach(key=None):
     '''
-    传入一个key for循环切片出来，如果i == key 返回第一个，否则返回第二个
-    :param key:
-    :return:
+
+    :param key:传入一个key for循环切片出来
+    :return:如果i == key 返回第一个，否则返回第二个
     '''
     for i in range(len(value)):
         if i == key:
@@ -267,7 +268,9 @@ def getStartTime(intDayNum=None):
     now_time = datetime.datetime.now()
     return (now_time + datetime.timedelta(days=intDayNum)).strftime("%Y%m%d%H%M%S")
 
-
+# TODO 封装获取redis数据的方法，还未进行
+def get_redis_data():
+    pass
 #
 
 

@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import configparser
 
 cf = configparser.ConfigParser()

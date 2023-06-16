@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 # 这个文件用来封装类方法名来运行httprunner
 # 先导包
 from httprunner.api import HttpRunner

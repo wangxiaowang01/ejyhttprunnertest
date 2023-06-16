@@ -6,6 +6,10 @@
   - hrun.\testsuites\demo_testsuite_c.yml - -log - level debug
 - main运行,run_httprunner
 - chinese（simplified）中文汉化官方插件
-- Indent Rainbow高亮显示缩进的插件
-- Nyan progress Bar进度条美化成彩虹猫咪的插件
-- Rainbow Brackets各种括号高亮显示的插件
+- Indent Rainbow 高亮显示缩进的插件
+- Nyan progress Bar 进度条美化成彩虹猫咪的插件
+- Rainbow Brackets Lite 免费各种括号高亮显示的插件
+- CodeGlance Pro  像sublime一样显示代码地图
+- Key Promoter X  键盘快捷键提示
+- Material Theme UI Lite  主题颜色等设置
+- Rainbow CSV  CSV格式彩色美化

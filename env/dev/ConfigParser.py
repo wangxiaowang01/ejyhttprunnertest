@@ -1,9 +1,18 @@
+# -*- coding:utf-8 -*-
 import os
 from configparser import ConfigParser
 
 
 class ParserConf():
+    """
+    这个类，主要用于获取配置文件config.ini文件里面的配置文件的ip端口账户密码datebases等配置信息的，
+    方便通过config.ini文件内的配置信息切换不同的数据库用于接下的数据库查询
+    """
     def __init__(self, file_name='config.ini'):  # 默认传参文件名为config.ini
+        """
+
+        :param file_name:
+        """
         # 定义要读取的文件 conf_path，os的路径方法dirname是当前文件夹绝对路径，加os的sep方法是斜杠\，在加file_name文件名
         self.conf_path = os.path.dirname(os.path.realpath(__file__)) + os.sep + file_name
         self.conf = ConfigParser(allow_no_value=True, delimiters='=')  # 创建ConfigParser类的实例

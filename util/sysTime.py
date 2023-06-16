@@ -45,9 +45,11 @@ class RunTime:
         return strOtherday
 
     def getFutureDataDay(self, intDayNum):
-        # 根据天数，来获取未来距离今天intDayNum天的日期
-        # intDayNum: int类型, 表示天数
-        # 返回的是一个date对象类型的日期,格式是"%Y-%m-%d"
+        """
+        根据天数，来获取未来距离今天intDayNum天的日期
+        :param intDayNum: int类型, 表示天数
+        :return: 返回的是一个date对象类型的日期,格式是"%Y-%m-%d"
+        """
         strToday = datetime.date.today()
         # strToday的日期格式就是"%Y-%m-%d"
         strOtherday = strToday + datetime.timedelta(days=intDayNum)
@@ -74,17 +76,22 @@ class RunTime:
         return future
 
     def getTimeStamp(self, strDate, strFormatDate):
+        """
         # 根据日期，获取时间戳
-        # strDate: 字符串类型的日期
-        # strFormatDate: 与strDate先对应的日期格式，例如"%Y-%m-%d"
-        # 返回一个int类型的时间戳
+        :param strDate: 字符串类型的日期
+        :param strFormatDate: 与strDate先对应的日期格式，例如"%Y-%m-%d"
+        :return: 返回一个int类型的时间戳
+        """
+
         timeArray = time.strptime(strDate, strFormatDate)
         timeStamp = time.mktime(timeArray)
         return int(timeStamp)
 
     def getTodayStamp(self):
-        # 获取今天的时间戳
-        # 返回的是一个int类型的时间戳,日期格式是"%Y-%m-%d"
+        """
+        取今天的时间戳
+        :return: 返回的是一个int类型的时间戳,日期格式是"%Y-%m-%d"
+        """
         strToday = datetime.date.today()
         timeArray = time.strptime(str(strToday), "%Y-%m-%d")
         timeStamp = time.mktime(timeArray)

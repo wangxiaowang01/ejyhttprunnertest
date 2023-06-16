@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+# 这个文件是老王封装的debugtalk文件内的方法copy过来的，不用，只是存放
 import os
 import time
 import datetime
